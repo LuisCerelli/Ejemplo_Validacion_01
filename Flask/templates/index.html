@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Textos y Métricas</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Validación de Textos y Métricas</h1>
+    <textarea id="generated-texts" placeholder="Escribe varios textos, separados por saltos de línea..."></textarea>
+    <button onclick="validateAndMetrics()">Validar y Generar Métricas</button>
+    <div id="validation-result"></div>
+    <canvas id="metricsChart"></canvas>
+    <div class="graph-description">
+        <h2>Estructura del Gráfico</h2>
+        <p>El gráfico representa las métricas de:</p>
+        <ul>
+            <li><strong>Precisión (Precision):</strong> Qué proporción de las predicciones para una clase son correctas.</li>
+            <li><strong>Recall (Recall):</strong> Qué proporción de los ejemplos reales de una clase fueron identificados correctamente.</li>
+            <li><strong>F1-Score:</strong> Promedio ponderado de precisión y recall.</li>
+        </ul>
+        <p>En el eje <strong>x</strong> tienes las etiquetas de las clases (<em>no-valido</em> y <em>valido</em>), y en el eje <strong>y</strong> los valores de las métricas correspondientes.</p>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
